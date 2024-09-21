@@ -369,10 +369,14 @@ function Services() {
 //   )
 // }
 
+interface Project {
+  name: string;
+  images: string[];
+}
 
 function Portfolio() {
-  const [selectedProject, setSelectedProject] = useState(null)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   const projects = [
     {
@@ -425,10 +429,10 @@ function Portfolio() {
     },
   ]
 
-  const openGallery = (project) => {
-    setSelectedProject(project)
-    setCurrentImageIndex(0)
-  }
+  const openGallery = (project: Project) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+  };
 
   const closeGallery = () => {
     setSelectedProject(null)
@@ -436,16 +440,20 @@ function Portfolio() {
   }
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === selectedProject.images.length - 1 ? 0 : prevIndex + 1
-    )
-  }
-
+    if (selectedProject) {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === selectedProject.images.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+  };
+  
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? selectedProject.images.length - 1 : prevIndex - 1
-    )
-  }
+    if (selectedProject) {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === 0 ? selectedProject.images.length - 1 : prevIndex - 1
+      );
+    }
+  };
 
   return (
     <section id="portfolio" className="py-20 bg-white">

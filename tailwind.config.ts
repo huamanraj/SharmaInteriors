@@ -15,5 +15,12 @@ const config: Config = {
     },
   },
   plugins: [],
+  "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "preserve",
+      "strict": true
+    }
 };
 export default config;
