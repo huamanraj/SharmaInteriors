@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
-import { Menu, X,  ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Menu, X, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -48,50 +48,52 @@ export default function Home() {
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       <style jsx global>{`
         ::-webkit-scrollbar {
-          width: 10px;
+          width: 3px;
         }
         ::-webkit-scrollbar-track {
-          background: #f1f1f1;
+          background: #997553;
         }
         ::-webkit-scrollbar-thumb {
-          background: #888;
+          background: #ffff;
           border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
           background: #555;
         }
       `}</style>
-      <header className={`fixed top-0 left-0 right-0 z-50 px-4 py-2 transition-all duration-300 ease-in-out ${isHeaderTransparent ? '' : 'flex justify-center'}`}>
-        <nav className={`transition-all duration-300 ease-in-out ${
-          isHeaderTransparent 
-            ? 'container mx-auto rounded-full' 
-            : 'rounded-full bg-white bg-opacity-10 backdrop-blur-md shadow-lg px-6 py-3 w-[80%]'
-        }`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 transition-all duration-300 ease-in-out ${isHeaderTransparent ? '' : 'flex justify-center'}`}>
+        <nav className={`transition-all duration-300 ease-in-out ${isHeaderTransparent
+          ? 'container mx-auto rounded-full'
+          : 'rounded-full bg-white bg-opacity-10 backdrop-blur-md shadow-lg px-6 py-3 w-[80%]'
+          }`}>
           <div className="flex items-center justify-between">
             <Link href="/" className={`text-2xl font-bold ${isHeaderTransparent ? 'text-white' : 'text-neutral-900'}`}>
-              Sharma Interior
+              <Image
+                src="/images/icon.png" // Path to your image
+                alt="Description of the image"
+                width={50} // Desired width
+                height={30} // Desired height
+              />
             </Link>
             <div className="hidden md:flex space-x-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-4 py-2 rounded-full transition-colors ${
-                    activeSection === item.href.slice(1)
-                      ? isHeaderTransparent ? 'bg-white bg-opacity-20 text-white font-semibold' : 'bg-neutral-200 bg-opacity-50 text-neutral-900 font-semibold'
-                      : isHeaderTransparent ? 'text-white hover:bg-white hover:bg-opacity-20' : 'text-neutral-600 hover:bg-neutral-200 hover:bg-opacity-50'
-                  }`}
+                  className={`px-4 py-2 rounded-full transition-colors ${activeSection === item.href.slice(1)
+                    ? isHeaderTransparent ? 'bg-white bg-opacity-20 text-white font-semibold' : 'bg-neutral-200 bg-opacity-50 text-neutral-900 font-semibold'
+                    : isHeaderTransparent ? 'text-white hover:bg-white hover:bg-opacity-20' : 'text-neutral-600 hover:bg-neutral-200 hover:bg-opacity-50'
+                    }`}
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
-            <button 
-              className={`md:hidden p-2 rounded-full transition-colors ${
-                isHeaderTransparent 
-                  ? 'text-white hover:bg-white hover:bg-opacity-20' 
-                  : 'text-neutral-900 hover:bg-neutral-200 hover:bg-opacity-50'
-              }`} 
+            <button
+              className={`md:hidden p-2 rounded-full transition-colors ${isHeaderTransparent
+                ? 'text-white hover:bg-white hover:bg-opacity-20'
+                : 'text-neutral-900 hover:bg-neutral-200 hover:bg-opacity-50'
+                }`}
               onClick={toggleMenu}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -162,14 +164,25 @@ function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <Image
-        src="/placeholder.svg?height=1080&width=1920"
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        loop
+        autoPlay
+        muted  >
+        <source src="/images/video4.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+
+      </video>
+
+
+      {/* <Image
+        src="/images/bg.gif"
         alt="Luxurious interior"
         layout="fill"
-        objectFit="cover"
+        objectFit="fill"
         quality={100}
         className="absolute inset-0 z-0"
-      />
+      /> */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
       <motion.div
         className="container mx-auto px-4 text-center relative z-20"
@@ -359,48 +372,48 @@ function Portfolio() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const projects = [
-    { 
-      name: 'Modern Loft', 
+    {
+      name: 'Modern Loft',
       images: [
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800'
       ]
     },
-    { 
-      name: 'Cozy Apartment', 
+    {
+      name: 'Cozy Apartment',
       images: [
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800'
       ]
     },
-    { 
-      name: 'Luxury Villa', 
+    {
+      name: 'Luxury Villa',
       images: [
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800'
       ]
     },
-    { 
-      name: 'Office Space', 
+    {
+      name: 'Office Space',
       images: [
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800'
       ]
     },
-    { 
-      name: 'Boutique Hotel', 
+    {
+      name: 'Boutique Hotel',
       images: [
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800'
       ]
     },
-    { 
-      name: 'Restaurant Interior', 
+    {
+      name: 'Restaurant Interior',
       images: [
         '/placeholder.svg?height=600&width=800',
         '/placeholder.svg?height=600&width=800',
@@ -420,13 +433,13 @@ function Portfolio() {
   }
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === selectedProject.images.length - 1 ? 0 : prevIndex + 1
     )
   }
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? selectedProject.images.length - 1 : prevIndex - 1
     )
   }
