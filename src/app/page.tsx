@@ -146,9 +146,9 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <p className="mb-4">&copy; 2023 Sharma Interior. All rights reserved.</p>
           <p>
-            Created by{' '}
-            <Link href="https://www.example.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
-              Your Name
+            Created by{'  '}
+            <Link href="https://www.zaman-raj.xy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+              Aman Raj
             </Link>
           </p>
         </div>
@@ -183,6 +183,9 @@ function Hero() {
         quality={100}
         className="absolute inset-0 z-0"
       /> */}
+
+
+
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
       <motion.div
         className="container mx-auto px-4 text-center relative z-20"
@@ -234,7 +237,7 @@ function About() {
         >
           <div className="md:w-1/2">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"
               alt="About Sharma Interior"
               width={800}
               height={600}
@@ -272,22 +275,22 @@ function Services() {
     {
       name: 'Residential Design',
       description: 'Create your dream living space tailored to your lifestyle and preferences.',
-      image: '/placeholder.svg?height=400&width=600',
+      image: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
     {
       name: 'Commercial Interiors',
       description: 'Elevate your business environment to impress clients and inspire employees.',
-      image: '/placeholder.svg?height=400&width=600',
+      image: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
     {
       name: 'Space Planning',
       description: 'Optimize your layout for efficiency, functionality, and aesthetic appeal.',
-      image: '/placeholder.svg?height=400&width=600',
+      image: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
     {
       name: 'Custom Furniture',
       description: 'Design and create unique pieces tailored to your style and space requirements.',
-      image: '/placeholder.svg?height=400&width=600',
+      image: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
   ]
 
@@ -375,49 +378,49 @@ function Portfolio() {
     {
       name: 'Modern Loft',
       images: [
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800'
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'
       ]
     },
     {
       name: 'Cozy Apartment',
       images: [
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800'
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'
       ]
     },
     {
       name: 'Luxury Villa',
       images: [
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800'
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'
       ]
     },
     {
       name: 'Office Space',
       images: [
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800'
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'
       ]
     },
     {
       name: 'Boutique Hotel',
       images: [
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800'
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'
       ]
     },
     {
       name: 'Restaurant Interior',
       images: [
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800',
-        '/placeholder.svg?height=600&width=800'
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+        'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'
       ]
     },
   ]
@@ -533,19 +536,19 @@ function Testimonials() {
       name: 'Sarah Johnson',
       role: 'Homeowner',
       content: 'Sharma Interior transformed our house into a dream home. Their attention to detail and creativity exceeded our expectations.',
-      avatar: '/placeholder.svg?height=100&width=100',
+      avatar: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
     {
       name: 'Michael Chen',
       role: 'Restaurant Owner',
       content: 'The team at Sharma Interior designed a stunning space for our restaurant. Our customers love the ambiance, and it has significantly boosted our business.',
-      avatar: '/placeholder.svg?height=100&width=100',
+      avatar: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
     {
       name: 'Emily Rodriguez',
       role: 'Office Manager',
       content: 'Our office renovation by Sharma Interior has improved productivity and employee satisfaction. It\'s a joy to come to work every day.',
-      avatar: '/placeholder.svg?height=100&width=100',
+      avatar: 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
     },
   ]
 
