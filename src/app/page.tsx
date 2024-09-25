@@ -182,7 +182,7 @@ export default function Page() {
           <p className="mb-4">&copy; 2024 Sharma Interior. All rights reserved.</p>
           <p className='text-sm'>
             Design and Developed by{'  '}
-            <Link href="https://www.aman-raj.xy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+            <Link href="https://www.aman-raj.xyz" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
               Aman Raj
             </Link>
           </p>
