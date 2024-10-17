@@ -33,15 +33,12 @@ export default function About() {
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Sharma Interior</h2>
             <p className="text-lg mb-6">
-              At Sharma Interior, we believe that every space has the potential to inspire and transform lives. With
-              over a decade of experience in the industry, our team of passionate designers brings creativity,
-              expertise, and attention to detail to every project.
-            </p>
-            <p className="text-lg mb-6">
-              We specialize in creating bespoke interiors that reflect the unique personality and lifestyle of our
-              clients. From residential to commercial spaces, our goal is to deliver exceptional designs that exceed
-              expectations and stand the test of time.
-            </p>
+  At Sharma Interior, we believe every space has the potential to inspire, elevate, and transform daily living. With over a decade of experience in interior design, our skilled team of creative designers brings unparalleled creativity, craftsmanship, and meticulous attention to detail to each project, ensuring visually stunning and functional spaces.
+</p>
+<p className="text-lg mb-6">
+  We specialize in crafting bespoke interior designs for both residential and commercial spaces, tailored to reflect the unique personality and lifestyle of our clients. From luxurious modular kitchens to elegant living rooms and professional office spaces, we are committed to delivering timeless designs that exceed expectations and stand the test of time.
+</p>
+
             <Link
               href="#services"
               className="inline-flex items-center text-lg font-semibold text-neutral-700 hover:text-neutral-600 hover:font-extrabold ease-in-out  border rounded-full px-3 py-1   transition-colors"
